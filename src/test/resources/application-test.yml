@@ -1,0 +1,6 @@
+ebean:
+  test:
+    platform: postgres
+    dbName: test
+    ddlMode: dropCreate
+#  dataTimeZone: UTC

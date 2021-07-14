@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'io.ebean' version '12.8.0'
+}
+
+group 'demo_ebean_issue_2264'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor "io.ebean:ebean-annotation:7.0"
+
+    implementation "io.ebean:ebean:12.8.0"
+    runtimeOnly 'org.postgresql:postgresql:42.2.23'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation "io.ebean:ebean-test:12.8.0"
+}
+
+test {
+    useJUnitPlatform()
+}
